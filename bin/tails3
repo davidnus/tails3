@@ -22,8 +22,9 @@ function applyColor(color, line){
 
 function tryPrettyPrint(line){
     var formatted;
-    var parsed
+    //var parsed
     try {
+      /*
         var parsed = JSON.parse(line);
         if(typeof parsed === 'string'){
             // if it was a single string, then try parsing again, in case this
@@ -33,6 +34,8 @@ function tryPrettyPrint(line){
             } catch(e){ }
         }
         formatted = JSON.stringify(parsed, null, '  ');
+       */
+        formatted = JSON.stringify(line, null, '  ');
     }catch(e){
         formatted = line;
     }
